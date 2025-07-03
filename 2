@@ -26,6 +26,9 @@
     form { display: flex; flex-direction: column; }
     input[type="email"] { padding: 12px; margin-bottom: 12px; border: none; border-radius: 4px; font-size: 1rem; }
     button[type="submit"] { padding: 12px; background: #C2A76F; color: #111; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+    /* Hook download section */
+    #hooks-download { display: none; max-width: 400px; margin: 40px auto; padding: 20px; background: #222; border-radius: 8px; text-align: center; }
+    #hooks-download a.download-btn { display: inline-block; margin-top: 12px; padding: 12px 24px; background: #C2A76F; color: #111; text-decoration: none; border-radius: 4px; }
     .testimonial { max-width: 600px; margin: 40px auto; font-style: italic; text-align: center; color: #DDD; }
     footer { text-align: center; padding: 20px; color: #888; font-size: 0.85rem; }
   </style>
@@ -35,7 +38,7 @@
     <img src="logo.png" alt="AG Advertisement Co. Logo" class="logo" />
   </header>  <section class="hero">
     <h1>Ready to Grow Your Business?</h1>
-    <p>Choose an ad package below and let's get started on your studio-quality campaign.</p>
+    <p>Choose an ad package below to get started with studio-quality campaigns.</p>
     <button onclick="scrollToPackages()">See Packages</button>
   </section>  <section class="section features">
     <h2>Why AG Advertisement Co.?</h2>
@@ -93,6 +96,10 @@
       <input type="email" name="email" placeholder="Your email address" required />
       <button type="submit">Submit</button>
     </form>
+  </div>  <!-- New Hook Download Section -->  <div id="hooks-download">
+    <h2>Your Free 10 Hooks</h2>
+    <p>Immediately download your 10 proven ad openers:</p>
+    <a href="/hooks.pdf" download class="download-btn">Download Hooks PDF</a>
   </div>  <section class="testimonial">
     <h2>What Our Clients Say</h2>
     <p>“AG Ad Co. transformed my social presence—my sales doubled in two weeks!”</p>
@@ -109,5 +116,13 @@
       document.getElementById('form-wrapper').style.display = 'block';
       document.getElementById('form-wrapper').scrollIntoView({ behavior: 'smooth' });
     }
+    // After form submission, reveal hooks section
+    document.querySelector('form[name="orderForm"]').addEventListener('submit', function(e) {
+      // allow Netlify to capture, then show hooks
+      setTimeout(function() {
+        document.getElementById('hooks-download').style.display = 'block';
+        document.getElementById('hooks-download').scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    });
   </script></body>
 </html>
