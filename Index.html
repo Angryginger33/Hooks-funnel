@@ -1,132 +1,384 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grow Your Business with AG Advertisement Co.</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: "Open Sans", sans-serif; background: #111; color: #FFF; line-height: 1.6; }
-    header { text-align: center; padding: 24px 0; }
-    header img { max-width: 120px; }
-    .hero { text-align: center; padding: 40px 20px; background: #222; }
-    .hero h1 { font-size: 2rem; margin-bottom: 12px; color: #C2A76F; }
-    .hero p { font-size: 1.1rem; color: #DDD; margin-bottom: 24px; }
-    .hero button { padding: 14px 28px; background: #C2A76F; color: #111; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
-    .section { padding: 40px 20px; }
-    .section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 24px; }
-    .features ul { max-width: 600px; margin: 0 auto 40px; list-style: disc; padding-left: 20px; }
-    .packages { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .package { background: #222; padding: 24px; border-radius: 8px; flex: 1 1 280px; max-width: 320px; text-align: center; }
-    .package h3 { font-size: 1.3rem; margin-bottom: 12px; color: #C2A76F; }
-    .package p { margin-bottom: 16px; color: #DDD; }
-    .package ul { list-style: none; padding: 0; margin: 0 0 16px; text-align: left; }
-    .package ul li::before { content: "✔"; margin-right: 8px; color: #5A3E2B; }
-    .package button { padding: 10px 20px; background: #5A3E2B; color: #FFF; border: none; border-radius: 4px; cursor: pointer; }
-    .testimonial { max-width: 600px; margin: 0 auto; font-style: italic; text-align: center; color: #DDD; }
-    .testimonial p { margin-bottom: 8px; }
-    footer { text-align: center; padding: 20px; color: #888; font-size: 0.85rem; }
-    #form-wrapper, #thankyou-wrapper { max-width: 400px; margin: 0 auto; }
-    form { text-align: center; margin-top: 24px; }
-    input[type="email"] { padding: 12px; width: 80%; max-width: 300px; border: none; border-radius: 4px; margin-right: 8px; }
-    button[type="submit"] { padding: 10px 20px; background: #C2A76F; color: #111; border: none; border-radius: 4px; cursor: pointer; }
-    #thankyou-wrapper { display: none; text-align: left; color: #C2A76F; }
-    #thankyou-wrapper h2 { text-align: center; }
-    #thankyou-wrapper ol { margin: 16px auto; max-width: 400px; padding-left: 20px; color: #DDD; }
-    #thankyou-wrapper a { display: inline-block; margin-top: 16px; padding: 12px 24px; background: #5A3E2B; color: #FFF; text-decoration: none; border-radius: 4px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Your Business with AG Advertisement Co.</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .gold-text {
+            color: #D4AF37;
+        }
+        .gold-bg {
+            background-color: #D4AF37;
+        }
+        .gold-bg:hover {
+            background-color: #C09B2D;
+        }
+        .gold-border {
+            border-color: #D4AF37;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <img src="logo.png" alt="AG Advertisement Co. Logo" />
-  </header>
-  <section class="hero">
-    <h1>Get More Customers Fast</h1>
-    <p>Studio-quality ads. Small-town prices. Download 10 scroll-stopping hooks now!</p>
-    <button onclick="document.getElementById('form-wrapper').scrollIntoView({behavior:'smooth'})">Grab Your Free Hooks</button>
-  </section>  <section class="section features">
-    <h2>Why AG Advertisement Co.?</h2>
-    <ul>
-      <li>Expertly crafted video ads & branded visuals</li>
-      <li>Affordable packages starting at $97</li>
-      <li>Proven hooks that stop the scroll</li>
-      <li>Fast turnaround—go live in days, not weeks</li>
-    </ul>
-  </section>  <section class="section" id="form-wrapper">
-    <h2>Claim Your Free Hooks</h2>
-    <p>Enter your email below and get instant access to 10 proven ad openers.</p>
-    <form name="leadForm" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="leadForm" />
-      <input type="email" name="email" placeholder="Your email address" required />
-      <button type="submit">Send Me Hooks →</button>
-    </form>
-  </section>  <section id="thankyou-wrapper">
-    <h2>🎉 Thank You!</h2>
-    <p>Your hooks are on their way to your inbox. Here they are:</p>
-    <ol>
-      <li>Are your ads getting lost in the scroll? Stop them in their tracks.</li>
-      <li>This 15-second video ad brought in 50 new customers—here’s why.</li>
-      <li>Struggling to get noticed online? Fix it in just one minute.</li>
-      <li>Want to turn casual scrollers into paying customers?</li>
-      <li>How this small business increased sales by 200% with one ad.</li>
-      <li>Stop DIY ads that flop—use our studio-quality templates.</li>
-      <li>Your fastest path to more customers? A scroll-stopping hook.</li>
-      <li>In just 10 seconds, your ad can get real results—here’s the hook.</li>
-      <li>Don’t let another potential customer swipe past—grab their attention now.</li>
-      <li>Affordable, high-impact ads are possible—check out these hooks.</li>
-    </ol>
-    <p>While you wait, check out our Starter Ad Kit:</p>
-    <a href="#packages">View Starter Kit ($97)</a>
-  </section>  <section class="section" id="packages">
-    <h2>Our Packages</h2>
-    <div class="packages">
-      <div class="package">
-        <h3>Starter Ad Kit</h3>
-        <p><strong>$97</strong></p>
-        <ul>
-          <li>1 branded image</li>
-          <li>15-sec video ad</li>
-          <li>Logo, message & brand colors</li>
-          <li>Ready-to-post format</li>
-        </ul>
-        <button>Order Starter Kit</button>
-      </div>
-      <div class="package">
-        <h3>Local Boost</h3>
-        <p><strong>$297</strong></p>
-        <ul>
-          <li>15–30 sec edited video ad</li>
-          <li>Matching graphic post</li>
-          <li>Hook & message support</li>
-          <li>Captions, overlays & music</li>
-        </ul>
-        <button>Order Local Boost</button>
-      </div>
-      <div class="package">
-        <h3>Growth Kit</h3>
-        <p><strong>$497</strong></p>
-        <ul>
-          <li>3 unique 15–30-sec video ads</li>
-          <li>3–5 branded visuals</li>
-          <li>15-min strategy call</li>
-          <li>Posting calendar & captions</li>
-          <li>Multi-platform exports</li>
-          <li>2 rounds of revisions</li>
-        </ul>
-        <button>Order Growth Kit</button>
-      </div>
-    </div>
-  </section>  <section class="section testimonial">
-    <h2>What Our Clients Say</h2>
-    <p>“AG Ad Co. transformed my social presence—my sales doubled in two weeks!”</p>
-    <p>– Jamie, Local Café Owner</p>
-  </section>  <footer>
-    📍 Yuma, AZ • 📧 agadvertisementco@gmail.com • Instagram: @ag_advertisementco • Facebook: /agadvertisementco
-  </footer>  <script>
-    // Show inline thank-you and hook list
-    document.querySelector('form[name="leadForm"]').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('form-wrapper').style.display = 'none';
-      document.getElementById('thankyou-wrapper').style.display = 'block';
-    });
-  </script></body>
+<body class="text-gray-200">
+
+    <!-- Header -->
+    <header class="text-center py-6">
+        <img src="https://placehold.co/120x120/121212/D4AF37?text=AG" alt="AG Advertisement Co. Logo" class="mx-auto rounded-full">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 text-center py-20 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Studio-Quality Ads. Small-Town Prices.</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">We create high-impact video and image ads that help local Yuma businesses get more customers.</p>
+        <a href="#packages" class="inline-block py-3 px-8 rounded-lg font-semibold text-gray-900 gold-bg text-lg transition-transform transform hover:scale-105">
+            View Our Packages
+        </a>
+    </section>
+
+    <main class="container mx-auto px-4">
+
+        <!-- Features Section -->
+        <section class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Why AG Advertisement Co.?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Expertly Crafted Ads</h3>
+                    <p class="text-gray-400">High-quality video and visuals that make your brand look its best.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Affordable Packages</h3>
+                    <p class="text-gray-400">Professional results without the big agency price tag.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Proven Strategies</h3>
+                    <p class="text-gray-400">We use methods that capture attention and drive customer action.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Fast Turnaround</h3>
+                    <p class="text-gray-400">Get your ads live in days, not weeks, to capitalize on momentum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section id="packages" class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Find Your Perfect Ad Package</h2>
+            <div class="flex flex-wrap justify-center items-stretch gap-8">
+                
+                <!-- Starter Ad Kit -->
+                <div class="bg-gray-800 rounded-lg p-8 flex flex-col w-full max-w-sm transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold gold-text mb-2">Starter Ad Kit</h3>
+                    <p class="text-4xl font-bold mb-4">$97</p>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>1 branded image and 15-sec video</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Logo, message, & brand colors</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Ready-to-post</span></li>
+                    </ul>
+                    <button onclick="showForm('Starter Ad Kit', '$97')" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-white bg-gray-600 hover:bg-gray-500 transition-colors duration-300">Order Starter Kit</button>
+                </div>
+
+                <!-- Local Boost -->
+                <div class="bg-gray-800 rounded-lg p-8 flex flex-col w-full max-w-sm border-2 gold-border shadow-lg shadow-yellow-400/10 transform hover:scale-105 transition-transform duration-300 relative">
+                    <div class="absolute top-0 -translate-y-1/2 w-full flex justify-center">
+                        <span class="bg-yellow-400 text-gray-900 text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">Most Popular</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Local Boost</h3>
+                    <p class="text-4xl font-bold mb-4">$297</p>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>15-30 sec edited video ad</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Matching branded graphic post</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Hook + message support</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Captions, logo, overlays, music</span></li>
+                    </ul>
+                    <button onclick="showForm('Local Boost', '$297')" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-gray-900 gold-bg transition-colors duration-300">Order Local Boost</button>
+                </div>
+
+                <!-- Growth Kit -->
+                <div class="bg-gray-800 rounded-lg p-8 flex flex-col w-full max-w-sm transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold gold-text mb-2">Growth Kit</h3>
+                    <p class="text-4xl font-bold mb-4">$497</p>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>3 unique 15-30-sec video ads</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>3-5 branded visuals</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>15-min strategy call</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Posting calendar + caption copy</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Multi-platform exports</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>2 full revisions</span></li>
+                    </ul>
+                    <button onclick="showForm('Growth Kit', '$497')" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-white bg-gray-600 hover:bg-gray-500 transition-colors duration-300">Order Growth Kit</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section (Initially Hidden) -->
+        <section id="form-wrapper" class="py-16 hidden">
+            <div class="bg-gray-800 p-8 rounded-lg max-w-lg mx-auto shadow-lg">
+                <h2 class="text-2xl font-bold text-center mb-2">Let's Get Started!</h2>
+                <p class="text-center text-gray-400 mb-6">You've selected the <strong id="selected-package-name" class="gold-text"></strong> package. Just fill out the form below.</p>
+                
+                <form name="orderForm" method="POST" data-netlify="true" action="/thank-you.html">
+                    <input type="hidden" name="form-name" value="orderForm">
+                    <input type="hidden" name="package" id="package-input">
+                    <input type="hidden" name="price" id="price-input">
+
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-300 mb-2 font-semibold">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="First & Last Name" required class="w-full p-3 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-300 mb-2 font-semibold">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full p-3 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white">
+                    </div>
+                    <div class="mb-6">
+                        <label for="notes" class="block text-gray-300 mb-2 font-semibold">Business & Notes</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your business, your goals for this campaign, and any ideas you have!" class="w-full p-3 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 rounded-lg font-semibold text-gray-900 gold-bg transition-colors duration-300 text-lg">Submit Request</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-16">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>
+                <div class="bg-gray-800 p-8 rounded-lg border-l-4 gold-border">
+                    <p class="text-xl italic text-gray-300">“AG Ad Co. transformed my social presence—my sales doubled in two weeks!”</p>
+                    <p class="mt-4 font-semibold gold-text">– Jamie, Local Café Owner</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-800">
+        <p class="text-gray-500">📍 Yuma, AZ • 📧 agadvertisementco@gmail.com</p>
+        <p class="text-gray-500">Instagram: @ag_advertisementco • Facebook: /agadvertisementco</p>
+    </footer>
+
+    <script>
+        // This script shows the form when a package button is clicked.
+        function showForm(packageName, packagePrice) {
+            const formWrapper = document.getElementById('form-wrapper');
+            
+            // Set the hidden input values for the form submission
+            document.getElementById('package-input').value = packageName;
+            document.getElementById('price-input').value = packagePrice;
+            
+            // Update the display text for the user
+            document.getElementById('selected-package-name').textContent = packageName;
+
+            // Make the form visible and scroll to it
+            formWrapper.classList.remove('hidden');
+            formWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+
+</body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Your Business with AG Advertisement Co.</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+        }
+        .gold-text {
+            color: #D4AF37;
+        }
+        .gold-bg {
+            background-color: #D4AF37;
+        }
+        .gold-bg:hover {
+            background-color: #C09B2D;
+        }
+        .gold-border {
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header -->
+    <header class="text-center py-6">
+        <img src="https://placehold.co/120x120/121212/D4AF37?text=AG" alt="AG Advertisement Co. Logo" class="mx-auto rounded-full">
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 text-center py-20 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Studio-Quality Ads. Small-Town Prices.</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">We create high-impact video and image ads that help local Yuma businesses get more customers.</p>
+        <a href="#packages" class="inline-block py-3 px-8 rounded-lg font-semibold text-gray-900 gold-bg text-lg transition-transform transform hover:scale-105">
+            View Our Packages
+        </a>
+    </section>
+
+    <main class="container mx-auto px-4">
+
+        <!-- Features Section -->
+        <section class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Why AG Advertisement Co.?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Expertly Crafted Ads</h3>
+                    <p class="text-gray-400">High-quality video and visuals that make your brand look its best.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Affordable Packages</h3>
+                    <p class="text-gray-400">Professional results without the big agency price tag.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Proven Strategies</h3>
+                    <p class="text-gray-400">We use methods that capture attention and drive customer action.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-semibold text-xl mb-2 gold-text">Fast Turnaround</h3>
+                    <p class="text-gray-400">Get your ads live in days, not weeks, to capitalize on momentum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section id="packages" class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Find Your Perfect Ad Package</h2>
+            <div class="flex flex-wrap justify-center items-stretch gap-8">
+                
+                <!-- Starter Ad Kit -->
+                <div class="bg-gray-800 rounded-lg p-8 flex flex-col w-full max-w-sm transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold gold-text mb-2">Starter Ad Kit</h3>
+                    <p class="text-4xl font-bold mb-4">$97</p>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>1 branded image and 15-sec video</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Logo, message, & brand colors</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Ready-to-post</span></li>
+                    </ul>
+                    <button onclick="showForm('Starter Ad Kit', '$97')" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-white bg-gray-600 hover:bg-gray-500 transition-colors duration-300">Order Starter Kit</button>
+                </div>
+
+                <!-- Local Boost -->
+                <div class="bg-gray-800 rounded-lg p-8 flex flex-col w-full max-w-sm border-2 gold-border shadow-lg shadow-yellow-400/10 transform hover:scale-105 transition-transform duration-300 relative">
+                    <div class="absolute top-0 -translate-y-1/2 w-full flex justify-center">
+                        <span class="bg-yellow-400 text-gray-900 text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">Most Popular</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Local Boost</h3>
+                    <p class="text-4xl font-bold mb-4">$297</p>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>15-30 sec edited video ad</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Matching branded graphic post</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Hook + message support</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Captions, logo, overlays, music</span></li>
+                    </ul>
+                    <button onclick="showForm('Local Boost', '$297')" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-gray-900 gold-bg transition-colors duration-300">Order Local Boost</button>
+                </div>
+
+                <!-- Growth Kit -->
+                <div class="bg-gray-800 rounded-lg p-8 flex flex-col w-full max-w-sm transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold gold-text mb-2">Growth Kit</h3>
+                    <p class="text-4xl font-bold mb-4">$497</p>
+                    <ul class="space-y-3 mb-8 flex-grow text-gray-300">
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>3 unique 15-30-sec video ads</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>3-5 branded visuals</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>15-min strategy call</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Posting calendar + caption copy</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>Multi-platform exports</span></li>
+                        <li class="flex items-start"><span class="text-green-400 mr-2 mt-1 shrink-0">✔</span><span>2 full revisions</span></li>
+                    </ul>
+                    <button onclick="showForm('Growth Kit', '$497')" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-white bg-gray-600 hover:bg-gray-500 transition-colors duration-300">Order Growth Kit</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section (Initially Hidden) -->
+        <section id="form-wrapper" class="py-16 hidden">
+            <div class="bg-gray-800 p-8 rounded-lg max-w-lg mx-auto shadow-lg">
+                <h2 class="text-2xl font-bold text-center mb-2">Let's Get Started!</h2>
+                <p class="text-center text-gray-400 mb-6">You've selected the <strong id="selected-package-name" class="gold-text"></strong> package. Just fill out the form below.</p>
+                
+                <form name="orderForm" method="POST" data-netlify="true" action="/thank-you.html">
+                    <input type="hidden" name="form-name" value="orderForm">
+                    <input type="hidden" name="package" id="package-input">
+                    <input type="hidden" name="price" id="price-input">
+
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-300 mb-2 font-semibold">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="First & Last Name" required class="w-full p-3 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-300 mb-2 font-semibold">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full p-3 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white">
+                    </div>
+                    <div class="mb-6">
+                        <label for="notes" class="block text-gray-300 mb-2 font-semibold">Business & Notes</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your business, your goals for this campaign, and any ideas you have!" class="w-full p-3 bg-gray-700 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 rounded-lg font-semibold text-gray-900 gold-bg transition-colors duration-300 text-lg">Submit Request</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-16">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>
+                <div class="bg-gray-800 p-8 rounded-lg border-l-4 gold-border">
+                    <p class="text-xl italic text-gray-300">“AG Ad Co. transformed my social presence—my sales doubled in two weeks!”</p>
+                    <p class="mt-4 font-semibold gold-text">– Jamie, Local Café Owner</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 mt-12 border-t border-gray-800">
+        <p class="text-gray-500">📍 Yuma, AZ • 📧 agadvertisementco@gmail.com</p>
+        <p class="text-gray-500">Instagram: @ag_advertisementco • Facebook: /agadvertisementco</p>
+    </footer>
+
+    <script>
+        // This script shows the form when a package button is clicked.
+        function showForm(packageName, packagePrice) {
+            const formWrapper = document.getElementById('form-wrapper');
+            
+            // Set the hidden input values for the form submission
+            document.getElementById('package-input').value = packageName;
+            document.getElementById('price-input').value = packagePrice;
+            
+            // Update the display text for the user
+            document.getElementById('selected-package-name').textContent = packageName;
+
+            // Make the form visible and scroll to it
+            formWrapper.classList.remove('hidden');
+            formWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+
+</body>
+</html>
+
