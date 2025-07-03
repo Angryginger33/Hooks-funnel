@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grow Your Business with AG Advertisement Co.</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: #111;
+      color: #FFF;
+      line-height: 1.6;
+    }
+    header { text-align: center; padding: 24px 0; }
+    header img { max-width: 120px; }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: #222;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 12px; color: #C2A76F; }
+    .hero p { font-size: 1.1rem; color: #DDD; margin-bottom: 24px; }
+    .hero button {
+      padding: 14px 28px;
+      background: #C2A76F;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .section { padding: 40px 20px; }
+    .section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 24px; }
+    .features ul {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      list-style: disc;
+      padding-left: 20px;
+    }
+    .packages {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .package {
+      background: #222;
+      padding: 24px;
+      border-radius: 8px;
+      flex: 1 1 280px;
+      max-width: 320px;
+      text-align: center;
+    }
+    .package h3 { font-size: 1.3rem; margin-bottom: 12px; color: #C2A76F; }
+    .package p { margin-bottom: 16px; color: #DDD; }
+    .package ul { list-style: none; padding: 0; margin: 0 0 16px; text-align: left; }
+    .package ul li::before { content: "✔"; margin-right: 8px; color: #5A3E2B; }
+    .package button {
+      padding: 10px 20px;
+      background: #5A3E2B;
+      color: #FFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto;
+      font-style: italic;
+      text-align: center;
+      color: #DDD;
+    }
+    .testimonial p { margin-bottom: 8px; }
+    footer { text-align: center; padding: 20px; color: #888; font-size: 0.85rem; }
+    form { text-align: center; margin-top: 24px; }
+    input[type="email"] {
+      padding: 12px;
+      width: 80%;
+      max-width: 300px;
+      border: none;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="AG Advertisement Co. Logo" />
+  </header>
+  <section class="hero">
+    <h1>Get More Customers Fast</h1>
+    <p>Studio-quality ads. Small-town prices. Download 10 scroll-stopping hooks now!</p>
+    <button onclick="document.getElementById('leadForm').scrollIntoView({behavior:'smooth'})">Grab Your Free Hooks</button>
+  </section>  <section class="section features">
+    <h2>Why AG Advertisement Co.?</h2>
+    <ul>
+      <li>Expertly crafted video ads & branded visuals</li>
+      <li>Affordable packages starting at $97</li>
+      <li>Proven hooks that stop the scroll</li>
+      <li>Fast turnaround—go live in days, not weeks</li>
+    </ul>
+  </section>  <section class="section" id="leadForm">
+    <h2>Claim Your Free Hooks</h2>
+    <p>Enter your email below and get instant access to 10 proven ad openers.</p>
+    <form name="leadForm" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="leadForm" />
+      <input type="email" name="email" placeholder="Your email address" required />
+      <button type="submit">Send Me Hooks →</button>
+    </form>
+  </section>  <section class="section">
+    <h2>Our Packages</h2>
+    <div class="packages">
+      <div class="package">
+        <h3>Starter Ad Kit</h3>
+        <p><strong>$97</strong></p>
+        <ul>
+          <li>1 branded image</li>
+          <li>15-sec video ad</li>
+          <li>Logo, message & brand colors</li>
+          <li>Ready-to-post format</li>
+        </ul>
+        <button>Order Starter Kit</button>
+      </div>
+      <div class="package">
+        <h3>Local Boost</h3>
+        <p><strong>$297</strong></p>
+        <ul>
+          <li>15–30 sec edited video ad</li>
+          <li>Matching graphic post</li>
+          <li>Hook & message support</li>
+          <li>Captions, overlays & music</li>
+        </ul>
+        <button>Order Local Boost</button>
+      </div>
+      <div class="package">
+        <h3>Growth Kit</h3>
+        <p><strong>$497</strong></p>
+        <ul>
+          <li>3 unique 15–30-sec video ads</li>
+          <li>3–5 branded visuals</li>
+          <li>15-min strategy call</li>
+          <li>Posting calendar & captions</li>
+          <li>Multi-platform exports</li>
+          <li>2 rounds of revisions</li>
+        </ul>
+        <button>Order Growth Kit</button>
+      </div>
+    </div>
+  </section>  <section class="section testimonial">
+    <h2>What Our Clients Say</h2>
+    <p>“AG Ad Co. transformed my social presence—my sales doubled in two weeks!”</p>
+    <p>– Jamie, Local Café Owner</p>
+  </section>  <footer>
+    📍 Yuma, AZ • 📧 agadvertisementco@gmail.com • Instagram: @ag_advertisementco • Facebook: /agadvertisementco
+  </footer>
+</body>
+</html>
