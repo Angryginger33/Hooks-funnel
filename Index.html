@@ -5,93 +5,33 @@
   <title>Grow Your Business with AG Advertisement Co.</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: "Open Sans", sans-serif;
-      background: #111;
-      color: #FFF;
-      line-height: 1.6;
-    }
+    body { font-family: "Open Sans", sans-serif; background: #111; color: #FFF; line-height: 1.6; }
     header { text-align: center; padding: 24px 0; }
     header img { max-width: 120px; }
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background: #222;
-    }
+    .hero { text-align: center; padding: 40px 20px; background: #222; }
     .hero h1 { font-size: 2rem; margin-bottom: 12px; color: #C2A76F; }
     .hero p { font-size: 1.1rem; color: #DDD; margin-bottom: 24px; }
-    .hero button {
-      padding: 14px 28px;
-      background: #C2A76F;
-      color: #111;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+    .hero button { padding: 14px 28px; background: #C2A76F; color: #111; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
     .section { padding: 40px 20px; }
     .section h2 { text-align: center; font-size: 1.6rem; margin-bottom: 24px; }
-    .features ul {
-      max-width: 600px;
-      margin: 0 auto 40px;
-      list-style: disc;
-      padding-left: 20px;
-    }
-    .packages {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .package {
-      background: #222;
-      padding: 24px;
-      border-radius: 8px;
-      flex: 1 1 280px;
-      max-width: 320px;
-      text-align: center;
-    }
+    .features ul { max-width: 600px; margin: 0 auto 40px; list-style: disc; padding-left: 20px; }
+    .packages { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .package { background: #222; padding: 24px; border-radius: 8px; flex: 1 1 280px; max-width: 320px; text-align: center; }
     .package h3 { font-size: 1.3rem; margin-bottom: 12px; color: #C2A76F; }
     .package p { margin-bottom: 16px; color: #DDD; }
     .package ul { list-style: none; padding: 0; margin: 0 0 16px; text-align: left; }
     .package ul li::before { content: "✔"; margin-right: 8px; color: #5A3E2B; }
-    .package button {
-      padding: 10px 20px;
-      background: #5A3E2B;
-      color: #FFF;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .testimonial {
-      max-width: 600px;
-      margin: 0 auto;
-      font-style: italic;
-      text-align: center;
-      color: #DDD;
-    }
+    .package button { padding: 10px 20px; background: #5A3E2B; color: #FFF; border: none; border-radius: 4px; cursor: pointer; }
+    .testimonial { max-width: 600px; margin: 0 auto; font-style: italic; text-align: center; color: #DDD; }
     .testimonial p { margin-bottom: 8px; }
     footer { text-align: center; padding: 20px; color: #888; font-size: 0.85rem; }
-    /* Form & Thank You wrappers */
     #form-wrapper, #thankyou-wrapper { max-width: 400px; margin: 0 auto; }
     form { text-align: center; margin-top: 24px; }
-    input[type="email"] {
-      padding: 12px;
-      width: 80%;
-      max-width: 300px;
-      border: none;
-      border-radius: 4px;
-      margin-right: 8px;
-    }
-    button[type="submit"] {
-      padding: 10px 20px;
-      background: #C2A76F;
-      color: #111;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    #thankyou-wrapper { display: none; text-align: center; color: #C2A76F; }
+    input[type="email"] { padding: 12px; width: 80%; max-width: 300px; border: none; border-radius: 4px; margin-right: 8px; }
+    button[type="submit"] { padding: 10px 20px; background: #C2A76F; color: #111; border: none; border-radius: 4px; cursor: pointer; }
+    #thankyou-wrapper { display: none; text-align: left; color: #C2A76F; }
+    #thankyou-wrapper h2 { text-align: center; }
+    #thankyou-wrapper ol { margin: 16px auto; max-width: 400px; padding-left: 20px; color: #DDD; }
     #thankyou-wrapper a { display: inline-block; margin-top: 16px; padding: 12px 24px; background: #5A3E2B; color: #FFF; text-decoration: none; border-radius: 4px; }
   </style>
 </head>
@@ -121,12 +61,24 @@
     </form>
   </section>  <section id="thankyou-wrapper">
     <h2>🎉 Thank You!</h2>
-    <p>Your hooks are on their way to your inbox.</p>
+    <p>Your hooks are on their way to your inbox. Here they are:</p>
+    <ol>
+      <li>Are your ads getting lost in the scroll? Stop them in their tracks.</li>
+      <li>This 15-second video ad brought in 50 new customers—here’s why.</li>
+      <li>Struggling to get noticed online? Fix it in just one minute.</li>
+      <li>Want to turn casual scrollers into paying customers?</li>
+      <li>How this small business increased sales by 200% with one ad.</li>
+      <li>Stop DIY ads that flop—use our studio-quality templates.</li>
+      <li>Your fastest path to more customers? A scroll-stopping hook.</li>
+      <li>In just 10 seconds, your ad can get real results—here’s the hook.</li>
+      <li>Don’t let another potential customer swipe past—grab their attention now.</li>
+      <li>Affordable, high-impact ads are possible—check out these hooks.</li>
+    </ol>
     <p>While you wait, check out our Starter Ad Kit:</p>
     <a href="#packages">View Starter Kit ($97)</a>
-  </section>  <section class="section">
+  </section>  <section class="section" id="packages">
     <h2>Our Packages</h2>
-    <div class="packages" id="packages">
+    <div class="packages">
       <div class="package">
         <h3>Starter Ad Kit</h3>
         <p><strong>$97</strong></p>
@@ -170,7 +122,7 @@
   </section>  <footer>
     📍 Yuma, AZ • 📧 agadvertisementco@gmail.com • Instagram: @ag_advertisementco • Facebook: /agadvertisementco
   </footer>  <script>
-    // Show thank-you message inline after form submission
+    // Show inline thank-you and hook list
     document.querySelector('form[name="leadForm"]').addEventListener('submit', function(e) {
       e.preventDefault();
       document.getElementById('form-wrapper').style.display = 'none';
