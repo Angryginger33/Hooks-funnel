@@ -7,7 +7,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: "Open Sans", sans-serif; background: #111; color: #FFF; line-height: 1.6; }
     header { text-align: center; padding: 24px 0; }
-    header img { max-width: 120px; }
+    header img { max-width: 150px; display: block; margin: 0 auto; }
     .hero { text-align: center; padding: 40px 20px; background: #222; }
     .hero h1 { font-size: 2rem; margin-bottom: 12px; color: #C2A76F; }
     .hero p { font-size: 1.1rem; color: #DDD; margin-bottom: 24px; }
@@ -22,30 +22,28 @@
     .package ul { list-style: none; padding: 0; margin: 0 0 16px; text-align: left; }
     .package ul li::before { content: "✔"; margin-right: 8px; color: #5A3E2B; }
     .package button { padding: 10px 20px; background: #5A3E2B; color: #FFF; border: none; border-radius: 4px; cursor: pointer; }
-    .testimonial { max-width: 600px; margin: 0 auto; font-style: italic; text-align: center; color: #DDD; }
-    .testimonial p { margin-bottom: 8px; }
+    #form-wrapper { display: none; max-width: 400px; margin: 40px auto; padding: 20px; background: #222; border-radius: 8px; text-align: center; }
+    form { display: flex; flex-direction: column; }
+    input[type="email"] { padding: 12px; margin-bottom: 12px; border: none; border-radius: 4px; font-size: 1rem; }
+    button[type="submit"] { padding: 12px; background: #C2A76F; color: #111; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+    .testimonial { max-width: 600px; margin: 40px auto; font-style: italic; text-align: center; color: #DDD; }
     footer { text-align: center; padding: 20px; color: #888; font-size: 0.85rem; }
-    /* Form hidden by default */
-    #form-wrapper { display: none; max-width: 400px; margin: 0 auto; padding: 20px; background: #222; border-radius: 8px; }
-    form { text-align: center; margin-top: 16px; }
-    input[type="email"] { padding: 12px; width: 80%; max-width: 300px; border: none; border-radius: 4px; margin-bottom: 12px; }
-    button[type="submit"] { padding: 10px 20px; background: #C2A76F; color: #111; border: none; border-radius: 4px; cursor: pointer; }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="AG Advertisement Co. Logo" />
+    <img src="logo.png" alt="AG Advertisement Co. Logo" class="logo" />
   </header>  <section class="hero">
-    <h1>Get More Customers Fast</h1>
-    <p>Studio-quality ads. Small-town prices. Choose a package to get started!</p>
-    <button onclick="selectPackage('Free Hooks')">Grab Free Hooks</button>
+    <h1>Ready to Grow Your Business?</h1>
+    <p>Choose an ad package below and let's get started on your studio-quality campaign.</p>
+    <button onclick="scrollToPackages()">See Packages</button>
   </section>  <section class="section features">
     <h2>Why AG Advertisement Co.?</h2>
     <ul>
-      <li>Expertly crafted video ads & branded visuals</li>
-      <li>Affordable packages from $97</li>
-      <li>Proven hooks that stop the scroll</li>
-      <li>Fast turnaround—go live in days, not weeks</li>
+      <li>Expert video ads and branded visuals</li>
+      <li>Packages starting at $97</li>
+      <li>Fast turnarounds—go live in days</li>
+      <li>Personalized strategy for local businesses</li>
     </ul>
   </section>  <section class="section" id="packages">
     <h2>Our Packages</h2>
@@ -57,9 +55,9 @@
           <li>1 branded image</li>
           <li>15-sec video ad</li>
           <li>Logo, message & brand colors</li>
-          <li>Ready-to-post format</li>
+          <li>Ready-to-post</li>
         </ul>
-        <button onclick="selectPackage('Starter Ad Kit')">Order Starter Kit</button>
+        <button onclick="showForm('Starter Ad Kit')">Order Starter Kit</button>
       </div>
       <div class="package">
         <h3>Local Boost</h3>
@@ -70,42 +68,46 @@
           <li>Hook & message support</li>
           <li>Captions, overlays & music</li>
         </ul>
-        <button onclick="selectPackage('Local Boost')">Order Local Boost</button>
+        <button onclick="showForm('Local Boost')">Order Local Boost</button>
       </div>
       <div class="package">
         <h3>Growth Kit</h3>
         <p><strong>$497</strong></p>
         <ul>
-          <li>3 unique 15–30-sec video ads</li>
+          <li>3 unique 15–30-sec videos</li>
           <li>3–5 branded visuals</li>
           <li>15-min strategy call</li>
           <li>Posting calendar & captions</li>
           <li>Multi-platform exports</li>
-          <li>2 rounds of revisions</li>
+          <li>2 revisions</li>
         </ul>
-        <button onclick="selectPackage('Growth Kit')">Order Growth Kit</button>
+        <button onclick="showForm('Growth Kit')">Order Growth Kit</button>
       </div>
     </div>
-  </section>  <section id="form-wrapper">
-    <h2>Let’s Get Started</h2>
-    <p>Please enter your email and we’ll follow up with details:</p>
+  </section>  <div id="form-wrapper">
+    <h2>Get Started</h2>
+    <p>Your selected package: <span id="selected-package"></span></p>
     <form name="orderForm" method="POST" data-netlify="true" action="/thank-you.html">
       <input type="hidden" name="form-name" value="orderForm" />
       <input type="hidden" name="package" id="package" value="" />
       <input type="email" name="email" placeholder="Your email address" required />
-      <button type="submit">Submit →</button>
+      <button type="submit">Submit</button>
     </form>
-  </section>  <section class="section testimonial">
+  </div>  <section class="testimonial">
     <h2>What Our Clients Say</h2>
     <p>“AG Ad Co. transformed my social presence—my sales doubled in two weeks!”</p>
     <p>– Jamie, Local Café Owner</p>
   </section>  <footer>
     📍 Yuma, AZ • 📧 agadvertisementco@gmail.com • Instagram: @ag_advertisementco • Facebook: /agadvertisementco
   </footer>  <script>
-    function selectPackage(pkg) {
+    function scrollToPackages() {
+      document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+    }
+    function showForm(pkg) {
+      document.getElementById('selected-package').textContent = pkg;
       document.getElementById('package').value = pkg;
       document.getElementById('form-wrapper').style.display = 'block';
-      document.querySelector('#form-wrapper').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('form-wrapper').scrollIntoView({ behavior: 'smooth' });
     }
   </script></body>
 </html>
