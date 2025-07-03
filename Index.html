@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,29 +24,23 @@
     #form-wrapper { display: none; background: #222; padding: 24px; border-radius: 8px; max-width: 400px; margin: 0 auto 40px; text-align: left; }
     #form-wrapper h2 { color: #C2A76F; margin-bottom: 12px; }
     #form-wrapper label { display: block; color: #DDD; margin-bottom: 4px; }
-    #form-wrapper input,
-    #form-wrapper textarea { width: 100%; padding: 10px; margin-bottom: 16px; border: none; border-radius: 4px; font-size: 1rem; }
+    #form-wrapper input, #form-wrapper textarea { width: 100%; padding: 10px; margin-bottom: 16px; border: none; border-radius: 4px; font-size: 1rem; }
     #form-wrapper button { width: 100%; padding: 12px; background: #C2A76F; color: #111; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
   </style>
 </head>
 <body>
-
   <header>
     <img src="logo.png" alt="AG Advertisement Co. Logo">
-  </header>
-
-  <section class="section">
+  </header>  <section class="section">
     <h2>Why You Need Our Ads</h2>
     <ul>
       <li>Stand out in a crowded social feed</li>
       <li>Professional, studio-quality production</li>
       <li>Transparent pricing—know exactly what you pay</li>
       <li>Fast delivery—get ads live in days</li>
-      <li>Targeted strategies for local Yuma businesses</li>
+      <li>Targeted strategies tailored to your audience</li>
     </ul>
-  </section>
-
-  <section class="section" id="packages">
+  </section>  <section class="section" id="packages">
     <h2>Choose Your Package</h2>
     <div class="packages">
       <div class="package">
@@ -78,9 +71,7 @@
         <button onclick="showForm('Growth Kit')">Select Growth Kit</button>
       </div>
     </div>
-  </section>
-
-  <div id="form-wrapper">
+  </section>  <div id="form-wrapper">
     <h2>Get Started</h2>
     <form name="orderForm" method="POST" data-netlify="true" action="/thank-you.html">
       <input type="hidden" name="form-name" value="orderForm">
@@ -93,15 +84,11 @@
       <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your business"></textarea>
       <button type="submit">Submit Request</button>
     </form>
-  </div>
-
-  <script>
+  </div>  <script>
     function showForm(pkg) {
       document.getElementById('package').value = pkg;
       document.getElementById('form-wrapper').style.display = 'block';
       document.getElementById('form-wrapper').scrollIntoView({ behavior: 'smooth' });
     }
-  </script>
-
-</body>
+  </script></body>
 </html>
