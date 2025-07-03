@@ -81,11 +81,20 @@
       <label for="notes">Business & Notes</label>
       <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your business"></textarea>
       <button type="submit">Submit Request</button>
-    </form>name="orderForm" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="orderForm" />
-  <!-- your other fields here -->
-</form>
-  </div>  <script>
+   <div id="form-wrapper">
+  <h2>Get Started</h2>
+  <form name="orderForm" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="orderForm" />
+    <input type="hidden" name="package" id="package" value="" />
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    <label for="notes">Business & Notes</label>
+    <textarea id="notes" name="notes" rows="3"></textarea>
+    <button type="submit">Submit Request</button>
+  </form>
+</div> <script>
     function showForm(pkg) {
       document.getElementById('package').value = pkg;
       document.getElementById('form-wrapper').style.display = 'block';
