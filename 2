@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AG Advertisement Co. — Studio-Quality Ads, Small-Town Prices</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Open Sans",sans-serif; background:#111; color:#FFF; }
+    header { text-align:center; padding:24px 0; }
+    header img { max-width:150px; margin:0 auto; display:block; }
+    .hero { background:#222; text-align:center; padding:40px 20px; }
+    .hero h1 { color:#C2A76F; font-size:2rem; margin-bottom:12px; }
+    .hero p { color:#DDD; font-size:1.1rem; margin-bottom:24px; }
+    .hero button { padding:14px 28px; background:#C2A76F; color:#111; border:none; border-radius:4px; cursor:pointer; }
+    .section { padding:40px 20px; }
+    .section h2 { text-align:center; font-size:1.6rem; margin-bottom:24px; }
+    .features ul { list-style:disc; padding-left:20px; max-width:600px; margin:0 auto 40px; color:#DDD; }
+    .features ul li { margin-bottom:8px; }
+    .packages { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .package { background:#222; border-radius:8px; padding:24px; flex:1 1 280px; max-width:320px; text-align:left; }
+    .package h3 { color:#C2A76F; margin-bottom:12px; font-size:1.3rem; }
+    .package p { color:#DDD; margin-bottom:16px; }
+    .package ul { list-style:none; padding:0; margin-bottom:16px; }
+    .package ul li::before { content:"✔"; margin-right:8px; color:#5A3E2B; }
+    .package button { padding:10px 20px; background:#5A3E2B; color:#FFF; border:none; border-radius:4px; cursor:pointer; }
+    #form-wrapper { display:none; background:#222; max-width:400px; margin:40px auto; padding:20px; border-radius:8px; text-align:center; }
+    #form-wrapper h2 { margin-bottom:12px; }
+    form { display:flex; flex-direction:column; }
+    input[type="email"] { padding:12px; font-size:1rem; margin-bottom:12px; border:none; border-radius:4px; }
+    button[type="submit"] { padding:12px; background:#C2A76F; color:#111; border:none; border-radius:4px; font-size:1rem; cursor:pointer; }
+    .testimonial { font-style:italic; text-align:center; color:#DDD; max-width:600px; margin:40px auto; }
+    footer { text-align:center; padding:20px; color:#888; font-size:0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="AG Advertisement Co. Logo">
+  </header>  <section class="hero">
+    <h1>Get Studio-Quality Ads at Small-Town Prices</h1>
+    <p>We help local businesses in Yuma stand out with affordable, scroll-stopping video ads and branded visuals.</p>
+    <button onclick="scrollToPackages()">View Packages</button>
+  </section>  <section class="section features">
+    <h2>Why You Need AG Advertisement Co.</h2>
+    <ul>
+      <li><strong>Local Expertise:</strong> We know Yuma’s audience and market.</li>
+      <li><strong>Professional Quality:</strong> Studio-grade video and design.</li>
+      <li><strong>Upfront Pricing:</strong> No hidden fees, packages from $97.</li>
+      <li><strong>Fast Turnaround:</strong> Get live ads in days, not weeks.</li>
+      <li><strong>Results-Driven:</strong> Creative strategy that boosts views and sales.</li>
+    </ul>
+  </section>  <section class="section" id="packages">
+    <h2>Our Packages</h2>
+    <div class="packages">
+      <div class="package">
+        <h3>Starter Ad Kit</h3>
+        <p><strong>$97</strong></p>
+        <ul>
+          <li>1 branded image</li>
+          <li>15-sec video ad</li>
+          <li>Logo, message & brand colors</li>
+        </ul>
+        <button onclick="showForm('Starter Ad Kit')">Order Starter Kit</button>
+      </div><div class="package">
+    <h3>Local Boost</h3>
+    <p><strong>$297</strong></p>
+    <ul>
+      <li>15–30 sec edited video ad</li>
+      <li>Matching graphic post</li>
+      <li>Captions, overlays & music</li>
+    </ul>
+    <button onclick="showForm('Local Boost')">Order Local Boost</button>
+  </div>
+
+  <div class="package">
+    <h3>Growth Kit</h3>
+    <p><strong>$497</strong></p>
+    <ul>
+      <li>3 unique 15–30-sec videos</li>
+      <li>3–5 branded visuals</li>
+      <li>Strategy call & posting plan</li>
+    </ul>
+    <button onclick="showForm('Growth Kit')">Order Growth Kit</button>
+  </div>
+</div>
+
+  </section>  <div id="form-wrapper">
+    <h2>Get Started</h2>
+    <p>Selected package: <strong id="selected-package"></strong></p>
+    <form name="orderForm" method="POST" data-netlify="true" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="orderForm">
+      <input type="hidden" name="package" id="package">
+      <input type="email" name="email" placeholder="Your email address" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>  <section class="testimonial">
+    <h2>What Our Clients Say</h2>
+    <p>“AG Ad Co. transformed my social presence—my sales doubled in two weeks!”</p>
+    <p>– Jamie, Local Café Owner</p>
+  </section>  <footer>
+    📍 Yuma, AZ • 📧 agadvertisementco@gmail.com • Instagram: @ag_advertisementco • Facebook: /agadvertisementco
+  </footer>  <script>
+    function scrollToPackages() {
+      document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+    }
+    function showForm(pkg) {
+      document.getElementById('selected-package').textContent = pkg;
+      document.getElementById('package').value = pkg;
+      document.getElementById('form-wrapper').style.display = 'block';
+      document.getElementById('form-wrapper').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script></body>
+</html>
