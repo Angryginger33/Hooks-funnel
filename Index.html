@@ -72,6 +72,8 @@
     }
     .testimonial p { margin-bottom: 8px; }
     footer { text-align: center; padding: 20px; color: #888; font-size: 0.85rem; }
+    /* Form & Thank You wrappers */
+    #form-wrapper, #thankyou-wrapper { max-width: 400px; margin: 0 auto; }
     form { text-align: center; margin-top: 24px; }
     input[type="email"] {
       padding: 12px;
@@ -81,6 +83,16 @@
       border-radius: 4px;
       margin-right: 8px;
     }
+    button[type="submit"] {
+      padding: 10px 20px;
+      background: #C2A76F;
+      color: #111;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #thankyou-wrapper { display: none; text-align: center; color: #C2A76F; }
+    #thankyou-wrapper a { display: inline-block; margin-top: 16px; padding: 12px 24px; background: #5A3E2B; color: #FFF; text-decoration: none; border-radius: 4px; }
   </style>
 </head>
 <body>
@@ -90,7 +102,7 @@
   <section class="hero">
     <h1>Get More Customers Fast</h1>
     <p>Studio-quality ads. Small-town prices. Download 10 scroll-stopping hooks now!</p>
-    <button onclick="document.getElementById('leadForm').scrollIntoView({behavior:'smooth'})">Grab Your Free Hooks</button>
+    <button onclick="document.getElementById('form-wrapper').scrollIntoView({behavior:'smooth'})">Grab Your Free Hooks</button>
   </section>  <section class="section features">
     <h2>Why AG Advertisement Co.?</h2>
     <ul>
@@ -99,7 +111,7 @@
       <li>Proven hooks that stop the scroll</li>
       <li>Fast turnaround—go live in days, not weeks</li>
     </ul>
-  </section>  <section class="section" id="leadForm">
+  </section>  <section class="section" id="form-wrapper">
     <h2>Claim Your Free Hooks</h2>
     <p>Enter your email below and get instant access to 10 proven ad openers.</p>
     <form name="leadForm" method="POST" data-netlify="true">
@@ -107,9 +119,14 @@
       <input type="email" name="email" placeholder="Your email address" required />
       <button type="submit">Send Me Hooks →</button>
     </form>
+  </section>  <section id="thankyou-wrapper">
+    <h2>🎉 Thank You!</h2>
+    <p>Your hooks are on their way to your inbox.</p>
+    <p>While you wait, check out our Starter Ad Kit:</p>
+    <a href="#packages">View Starter Kit ($97)</a>
   </section>  <section class="section">
     <h2>Our Packages</h2>
-    <div class="packages">
+    <div class="packages" id="packages">
       <div class="package">
         <h3>Starter Ad Kit</h3>
         <p><strong>$97</strong></p>
@@ -152,6 +169,12 @@
     <p>– Jamie, Local Café Owner</p>
   </section>  <footer>
     📍 Yuma, AZ • 📧 agadvertisementco@gmail.com • Instagram: @ag_advertisementco • Facebook: /agadvertisementco
-  </footer>
-</body>
+  </footer>  <script>
+    // Show thank-you message inline after form submission
+    document.querySelector('form[name="leadForm"]').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-wrapper').style.display = 'none';
+      document.getElementById('thankyou-wrapper').style.display = 'block';
+    });
+  </script></body>
 </html>
