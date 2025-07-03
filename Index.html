@@ -81,7 +81,10 @@
       <label for="notes">Business & Notes</label>
       <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your business"></textarea>
       <button type="submit">Submit Request</button>
-    </form>
+    </form>name="orderForm" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="orderForm" />
+  <!-- your other fields here -->
+</form>
   </div>  <script>
     function showForm(pkg) {
       document.getElementById('package').value = pkg;
